@@ -55,6 +55,60 @@ header {
 	}
 }
 
+/* navigation */
+.navbar {
+	background-color: var(--primary-color);
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu > li {
+	position: relative;
+	flex: 1 1 10em;
+}
+
+.navbar a {
+	display: block;
+	padding: .75em 1em;
+	color: var(--light);
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+	font-style: italic;
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 20;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: var(--primary-color);
+	min-width: 12em;
+}
+
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu {
+	display: block;
+}
+
+.has-submenu > a::after {
+	content: " \25BE";
+	padding-left: .25em;
+}
+
 /* the styles for the main element */
 main {
 	clear: left;
